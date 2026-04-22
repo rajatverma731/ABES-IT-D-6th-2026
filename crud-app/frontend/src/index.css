@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --primary: #6366f1;
-  --primary-hover: #4f46e5;
-  --bg-color: #0f172a;
-  --surface: #1e293b;
-  --surface-hover: #334155;
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-  --acc-admin: #ec4899;
-  --acc-user: #10b981;
-  --acc-manager: #f59e0b;
+  --primary: #0284c7;
+  --primary-hover: #0369a1;
+  --bg-color: #f0fdfa;
+  --surface: #ffffff;
+  --surface-hover: #f1f5f9;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --acc-admin: #db2777;
+  --acc-user: #059669;
+  --acc-manager: #d97706;
   --danger: #ef4444;
   --danger-hover: #dc2626;
-  --glass-bg: rgba(30, 41, 59, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(15, 23, 42, 0.1);
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -32,10 +32,18 @@ body {
   color: var(--text-main);
   line-height: 1.5;
   background-image: 
-    radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(236, 72, 153, 0.15) 0px, transparent 50%);
+    radial-gradient(at 20% 0%, rgba(16, 185, 129, 0.2) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, rgba(6, 182, 212, 0.2) 0px, transparent 50%);
   background-attachment: fixed;
+  background-size: 200% 200%;
+  animation: gradientFlow 15s ease infinite alternate;
   min-height: 100vh;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .app-container {
@@ -55,8 +63,8 @@ body {
 }
 
 .header h1 {
-  font-size: 2rem;
-  background: linear-gradient(to right, #818cf8, #c084fc);
+  font-size: 2.25rem;
+  background: linear-gradient(to right, #34d399, #22d3ee);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
@@ -149,7 +157,7 @@ body {
 
 .modern-table td {
   padding: 1rem;
-  background-color: rgba(30, 41, 59, 0.4);
+  background-color: rgba(255, 255, 255, 0.6);
   transition: background-color 0.2s ease;
 }
 
@@ -158,12 +166,12 @@ body {
 }
 
 .modern-table tbody tr:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
 }
 
 .modern-table tbody tr:hover td {
-  background-color: rgba(51, 65, 85, 0.6);
+  background-color: rgba(241, 245, 249, 0.8);
 }
 
 .modern-table td:first-child {
@@ -320,7 +328,7 @@ body {
 }
 
 .close-btn:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(15, 23, 42, 0.1);
   color: var(--text-main);
 }
 
@@ -344,9 +352,9 @@ body {
 
 .form-group input,
 .form-group select {
-  padding: 0.75rem;
-  border-radius: 0.5rem;
-  background-color: rgba(15, 23, 42, 0.6);
+  padding: 0.85rem;
+  border-radius: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.9);
   border: 1px solid var(--glass-border);
   color: var(--text-main);
   font-family: inherit;

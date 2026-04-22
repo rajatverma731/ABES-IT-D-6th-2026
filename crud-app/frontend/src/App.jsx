@@ -15,7 +15,7 @@ function App() {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [editingUser, setEditingUser] = useState(null);
 
-  const API_URL = 'http://localhost:3000/users';
+  const API_URL = `http://${window.location.hostname}:3000/users`;
 
   const fetchUsers = async () => {
     try {
